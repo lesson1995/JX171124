@@ -1,0 +1,36 @@
+
+注意 基本上一切命令之前都要加 git   可以理解为你叫git这个软件干嘛 所以要先叫它
+基本上是没有提示说明一切顺利  有提示说明出错了
+
+第一次
+git init
+初始化 新建一个仓库  可以 git init JX1711  初始化一个叫JX1711的文件夹
+
+之后
+ cd +文件夹名   这个注意不需要加 git
+进入你自己的文件夹  
+
+git pwd  查看当前所在路径
+
+git add 
+
+git commit -m "写上你的注释"
+git commit -a 
+忽略注释这一步   ,这根oracle inster一样只有commit才会提交  在commit之前可以add若干个文件名
+
+$ git remote add origin git@github.com:lesson1995/JX1711.git
+
+ 连接到远程仓库  我的仓库   如果连接错了要撤销  $ git remote rm origin  然后重新连接
+
+$ git status -s   查看当前缓存中文件的状态 M代表修改后的  A代表存在工作盘中了 
+? 代表在缓存中 可以通过 commit来提交 
+
+
+
+示范一下如何传文件到我的远程仓库  先要有这个文件在本地仓库的子目录或者根目录中 
+右键复制 不能Ctrl+V
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:lesson1995/JX171124.git
+git push -u origin master
